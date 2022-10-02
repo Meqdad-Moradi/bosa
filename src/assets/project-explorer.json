@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "kanzleien",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": "ali"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "sachbearbeiter",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": "meqdad"
+      },
+      {
+        "childId": 2,
+        "childName": "ekhart"
+      },
+      {
+        "childId": 3,
+        "childName": "sergej"
+      },
+      {
+        "childId": 4,
+        "childName": "yosuf"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "entwicklung",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": "jan ali"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "verkauf",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": "kaman rostam"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "support",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": "janan"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "schulung",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": "john doe"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "administration",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": ""
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "InBox",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": ""
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "OutBox",
+    "icon": "",
+
+    "children": [
+      {
+        "childId": 1,
+        "childName": ""
+      }
+    ]
+  }
+]

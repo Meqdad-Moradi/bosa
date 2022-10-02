@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "supportfall / projekt erfassen",
+    "icon": "support_agent"
+  },
+  {
+    "id": 2,
+    "name": "rückruf erfassen",
+    "icon": "phone_callback"
+  },
+  {
+    "id": 3,
+    "name": "personen suchen",
+    "icon": "person_search"
+  },
+  {
+    "id": 4,
+    "name": "notizen und dokumente suchen",
+    "icon": "plagiarism"
+  },
+  {
+    "id": 5,
+    "name": "unerledigte supportfälle",
+    "icon": "help_center"
+  },
+  {
+    "id": 5,
+    "name": "projekte",
+    "icon": "wb_incandescent"
+  },
+  {
+    "id": 5,
+    "name": "produktmanagement",
+    "icon": "room_preferences"
+  },
+  {
+    "id": 5,
+    "name": "supportfall / termin erfassen",
+    "icon": "today"
+  }
+]
