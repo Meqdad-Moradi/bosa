@@ -1,4 +1,4 @@
-<section class="flex flex-col gap-8">
+<section class="flex flex-col gap-8 mt-2">
   <nav class="bg-slate-100 [&>*]:text-slate-800 p-8 rounded-2xl">
     <h2 class="headline mt-0">aktionen</h2>
 
@@ -39,10 +39,14 @@
           <span class="first-letter:uppercase">{{ listItem.name }}</span>
         </div>
 
-        <div id="children" class="mt-2 ml-14" *ngIf="listItem?.children">
+        <div
+          id="children"
+          class="mt-2 ml-14"
+          *ngIf="listItem?.children"
+        >
           <p
             *ngFor="let ch of listItem.children"
-            class="text-slate-500 first-letter:uppercase transition-all ease-in-out cursor-pointer"
+            class="my-2 text-slate-500 hover:text-indigo-400 first-letter:uppercase transition-all ease cursor-pointer"
           >
             {{ ch.childName }}
           </p>

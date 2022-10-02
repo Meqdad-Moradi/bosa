@@ -1,1 +1,52 @@
-<p>header works!</p>
+<header
+  class="flex items-center justify-between py-8 bg-indigo-600"
+  id="header"
+>
+  <div class="logo">
+    <a
+      href="/index.html"
+      aria-label="site-logo"
+      class="transition-all duration-200 ease-in-out text-3xl font-bold text-slate-50"
+      >Kiss</a
+    >
+  </div>
+
+  <nav id="header-nav">
+    <ul
+      class="flex gap-6 items-center justify-center [&>li>a]:text-slate-50 hover:[&>li>a]:text-slate-300"
+    >
+      <li>
+        <a
+          routerLinkActive="active"
+          routerLink="/home"
+          class="transition-all duration-200 ease-in-out text-lg"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLinkActive="active"
+          routerLink="/about"
+          class="transition-all duration-200 ease-in-out text-lg"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          routerLinkActive="active"
+          routerLink="/sachbearbeiter"
+          class="transition-all duration-200 ease-in-out text-lg"
+          >Sachbearbeiter</a
+        >
+      </li>
+      <li>
+        <a
+          routerLinkActive="active"
+          routerLink="/contact-us"
+          class="transition-all duration-200 ease-in-out text-lg"
+          >Contact us</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

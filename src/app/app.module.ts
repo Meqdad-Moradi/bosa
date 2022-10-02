@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideNaveComponent } from './components/side-nave/side-nave.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SachbearbeiterComponent } from './components/sachbearbeiter/sachbearbeiter.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     HeaderComponent,
     SideNaveComponent,
     NotFoundComponent,
+    SachbearbeiterComponent,
   ],
   imports: [
     BrowserModule,
