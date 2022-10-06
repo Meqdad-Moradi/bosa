@@ -1,0 +1,19 @@
+.mat-container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  margin: 0;
+}
+
+.sidenav {
+  width: max-content;
+}
+
+.drawer-content {
+  padding: 0 1.6em;
+}
+
+@media (max-width: 400px) {
+  .sidenav {
+    width: 15em;
+  }
+}

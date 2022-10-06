@@ -1,7 +1,7 @@
 .sideNavTitle ~ div {
   max-height: 0;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: all 0.5s ease-in-out .1s;
+  transition: all 0.5s ease-in-out 0.1s;
 }
 
 .sideNavTitle.active ~ div {
@@ -10,5 +10,10 @@
 }
 
 .sideNavTitle.active {
-    color: #4f46e5;
-  }
+  color: #4f46e5;
+}
+
+.sidenav-toolbar {
+  background-color: #cfd7ff;
+  padding: 0 1.4em;
+}

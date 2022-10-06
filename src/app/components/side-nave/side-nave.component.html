@@ -1,57 +1,71 @@
-<section class="flex flex-col gap-8 mt-2">
-  <nav class="bg-slate-100 [&>*]:text-slate-800 p-8 rounded-2xl">
-    <h2 class="headline mt-0">aktionen</h2>
-
-    <ul>
-      <li
-        *ngFor="let listItem of actionNavData"
-        class="flex items-center transition-all ease-in-out py-2"
-      >
-        <a
-          [routerLink]="['/home']"
-          class="flex items-center gap-6 hover:text-indigo-600 transition-all duration-200 ease-in-out"
-        >
-          <span class="flex items-center text-indigo-600">
-            <mat-icon>{{ listItem.icon }}</mat-icon>
-          </span>
-          <span class="first-letter:uppercase">{{ listItem.name }}</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <nav class="bg-slate-100 [&>*]:text-slate-800 p-8 rounded-2xl">
-    <ul>
-      <h2 class="headline mt-0">projekt explorer</h2>
-
-      <li
-        *ngFor="let listItem of projectExplorerData"
-        (click)="toggleSideNave(listItem)"
-        class="flex flex-col transition-all duration-200 ease-in-out py-1 hover:text-indigo-600"
-      >
-        <div
-          class="sideNavTitle flex gap-6 transition-all duration-200 ease-in-out cursor-pointer"
-          [ngClass]="listItem.id === customId ? 'active' : ''"
-        >
-          <span class="flex items-center text-indigo-600"
-            ><mat-icon>folder</mat-icon></span
+<mat-drawer-container
+  class="mat-container bg-white"
+  [hasBackdrop]="isSmallScreen ? true : false"
+  autosize
+>
+  <mat-drawer
+    class="sidenav"
+    #drawer
+    mode="side"
+    opened="true"
+    [opened]="isSmallScreen ? 'false' : 'tru'"
+    [mode]="isSmallScreen ? 'over' : 'side'"
+  >
+    <section class="flex flex-col">
+      <nav class="[&>*]:text-slate-800">
+        <mat-toolbar class="sidenav-toolbar">Aktionen</mat-toolbar>
+        <ul class="p-6">
+          <li
+            *ngFor="let listItem of actionNavData"
+            class="flex items-center transition-all ease-in-out py-2"
           >
-          <span class="first-letter:uppercase">{{ listItem.name }}</span>
-        </div>
+            <a
+              [routerLink]="['/home']"
+              class="flex items-center gap-6 hover:text-indigo-600 transition-all duration-200 ease-in-out"
+            >
+              <span class="flex items-center text-indigo-600">
+                <mat-icon>{{ listItem.icon }}</mat-icon>
+              </span>
+              <span class="first-letter:uppercase">{{ listItem.name }}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-        <div
-          id="children"
-          class="mt-2 ml-14"
-          *ngIf="listItem?.children"
-        >
-          <p
-            *ngFor="let ch of listItem.children"
-            class="my-2 text-slate-500 hover:text-indigo-400 first-letter:uppercase transition-all ease cursor-pointer"
+      <nav class="[&>*]:text-slate-800">
+        <mat-toolbar class="sidenav-toolbar">Projekt Explorer</mat-toolbar>
+        <ul class="p-6">
+          <li
+            *ngFor="let listItem of projectExplorerData"
+            (click)="toggleSideNave(listItem)"
+            class="flex flex-col transition-all duration-200 ease-in-out py-1 hover:text-indigo-600"
           >
-            {{ ch.childName }}
-          </p>
-        </div>
-      </li>
-    </ul>
-  </nav>
-</section>
+            <div
+              class="sideNavTitle flex gap-6 transition-all duration-200 ease-in-out cursor-pointer"
+              [ngClass]="listItem.id === customId ? 'active' : ''"
+            >
+              <span class="flex items-center text-indigo-600"
+                ><mat-icon>folder</mat-icon></span
+              >
+              <span class="first-letter:uppercase">{{ listItem.name }}</span>
+            </div>
+
+            <div id="children" class="mt-2 ml-14" *ngIf="listItem?.children">
+              <p
+                *ngFor="let ch of listItem.children"
+                class="my-2 text-slate-500 hover:text-indigo-400 first-letter:uppercase transition-all ease cursor-pointer"
+              >
+                {{ ch.childName }}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </mat-drawer>
+
+  <!-- content -->
+  <mat-drawer-content class="drawer-content">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
